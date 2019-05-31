@@ -8,7 +8,7 @@ get_header(); ?>
                 <div class="carousel-inner"> 
 
                 <?php
-                    $args = array('posts_per_page' => 2);
+                    $args = array('posts_per_page' => 1);
                     $query = new WP_Query( $args );
                     if ( have_posts() ) {
 
@@ -28,19 +28,76 @@ get_header(); ?>
 
                 </div>                         
             </div>                     
-        </div>                 
+        </div>
+        
         <div class="col-md-6 py-0 px-1 mtm-3"> 
             <div class="row">
             
             <?php
-                $args = array('posts_per_page' => 2);
+                $args = array('posts_per_page' => 1, 'offset' => 1);
                 $query = new WP_Query( $args );
                 if ( have_posts() ) {
 
                     // Load posts loop.
                     while ( $query->have_posts() ) {
                         $query->the_post();
-                            get_template_part( 'template-parts/content/top-right' );
+                            get_template_part( 'template-parts/content/top-right-first' );
+                        }
+
+                    } else {
+
+                        // If no content, include the "No posts found" template.
+                        get_template_part( 'template-parts/content/top-right', 'none' );
+
+                    }
+                ?>
+            <?php
+                $args = array('posts_per_page' => 1, 'offset' => 2);
+                $query = new WP_Query( $args );
+                if ( have_posts() ) {
+
+                    // Load posts loop.
+                    while ( $query->have_posts() ) {
+                        $query->the_post();
+                            get_template_part( 'template-parts/content/top-right-second' );
+                        }
+
+                    } else {
+
+                        // If no content, include the "No posts found" template.
+                        get_template_part( 'template-parts/content/top-right', 'none' );
+
+                    }
+                ?>
+
+            <?php
+                $args = array('posts_per_page' => 1, 'offset' => 3);
+                $query = new WP_Query( $args );
+                if ( have_posts() ) {
+
+                    // Load posts loop.
+                    while ( $query->have_posts() ) {
+                        $query->the_post();
+                            get_template_part( 'template-parts/content/top-right-third' );
+                        }
+
+                    } else {
+
+                        // If no content, include the "No posts found" template.
+                        get_template_part( 'template-parts/content/top-right', 'none' );
+
+                    }
+                ?>
+
+            <?php
+                $args = array('posts_per_page' => 1, 'offset' => 4);
+                $query = new WP_Query( $args );
+                if ( have_posts() ) {
+
+                    // Load posts loop.
+                    while ( $query->have_posts() ) {
+                        $query->the_post();
+                            get_template_part( 'template-parts/content/top-right-fourth' );
                         }
 
                     } else {
@@ -53,6 +110,7 @@ get_header(); ?>
 
             </div>
         </div>
+
     </div>
 </div>
 

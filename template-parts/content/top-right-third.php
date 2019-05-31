@@ -1,4 +1,4 @@
-                <div class="col-6 pb-2 mrml-m">
+                <div class="col-6 pb-2 mlmr-m">
                     <div class="card bg-dark text-white">
                         <?php the_post_thumbnail('post-thumbnail', ['class' => 'card-img img-fluid', 'title' => 'Thumb Photo']); ?>
                         <div class="card-img-overlay d-flex"> 

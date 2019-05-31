@@ -28,7 +28,6 @@ function pincode_setup() {
     // Add menus.
     register_nav_menus( array(
         'primary' => __( 'Primary Menu', 'pincode' ),
-        'social'  => __( 'Social Links Menu', 'pincode' ),
     ) );
 
     /*
