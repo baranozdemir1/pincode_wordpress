@@ -1,4 +1,6 @@
 <?php
+require_once('inc/bs4navwalker.php');
+require_once('inc/ozel-sidebar.php');
 if ( ! function_exists( 'pincode_setup' ) ) :
 
 function pincode_setup() {

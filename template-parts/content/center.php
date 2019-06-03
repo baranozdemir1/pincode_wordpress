@@ -3,7 +3,16 @@
                 <div class="baran-cardheader"> 
                     <div class="baran-zoom-effect"> 
                         <a href="<?php the_permalink(); ?>"> 
-                            <?php the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid', 'title' => 'Thumb Photo']); ?>
+                            <?php
+                                if ( has_post_thumbnail() )
+                                {
+                                    $post_title = get_the_title();
+                                    the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid', 'alt' => $post_title]);
+                                }
+                                else
+                                {?>
+                                <img class="img-fluid rounded mb-3" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/empty-thumbnail.png" alt="">
+                            <?php } ?>
                         </a>                                 
                     </div>                             
                 </div>                         
