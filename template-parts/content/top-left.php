@@ -25,7 +25,7 @@
 
                                     <h4 class="card-title manset-font"><?=get_the_title();?></h4>
                               
-                                    <p class="textfeat " style="display: none;"><?=wp_trim_words(get_the_content(),15);?></p> 
+                                    <p class="textfeat " style="display: none;"><?=wp_trim_words(get_the_content(),10);?></p> 
                                 </a>
                             </div>
                         </div>

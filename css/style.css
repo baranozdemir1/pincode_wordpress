@@ -391,3 +391,21 @@ body {
 .cursor-default{
     cursor: default;
 }
+.error-content {
+    padding: 0 0 70px;
+}
+.error-text{
+    text-align: center;
+}
+.error {
+    font-size: 180px;
+    font-weight: 100;
+}
+@keyframes bob {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 0.2em;
+    }
+}

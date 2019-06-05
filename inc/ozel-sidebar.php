@@ -3,12 +3,12 @@ add_action( 'widgets_init', 'pincode_widgets_init' );
 function pincode_widgets_init() {
     register_sidebar( array(
         'name' => __( 'Detay Sayfası Yan Bar', 'pincode' ),
-        'id' => 'sidebar-1',
+        'id' => 'pincode_son_yazilar',
         'description' => __( 'Yazı detay sayfasındaki yan bar.', 'pincode' ),
         'before_widget' => '<div class="widget-sidebar">',
-	'after_widget'  => '</div>',
-	'before_title'  => '<h2 class="title-widget-sidebar cursor-default">',
-	'after_title'   => '</h2>',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="title-widget-sidebar cursor-default">',
+        'after_title'   => '</h2>',
     ) );
 }
 
@@ -74,7 +74,7 @@ class PinCode_SonGonderiler_Widget extends WP_Widget {
                                     }
                                     else
                                     {?>
-                                    <img class="img-fluid rounded mb-3" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/empty-thumbnail.png" alt="">
+                                    <img class="img-fluid" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/empty-thumbnail.png" alt="">
                                 <?php } ?>
                         </div>
                         <a href="<?php the_permalink() ?>" title="<?php echo esc_attr( get_the_title() ? get_the_title() : get_the_ID() ); ?>">  <h6>
@@ -83,7 +83,7 @@ class PinCode_SonGonderiler_Widget extends WP_Widget {
                         
                         </h6>  </a> 
                         <?php if ( $show_date ) : ?>
-                        <p><small><i class="fa fa-calendar" data-original-title="" title=""></i> <?php echo get_the_date(); ?></small></p> 
+                        <p><small class="cursor-default"><i class="fa fa-calendar" data-original-title="" title=""></i> <?php echo get_the_date(); ?></small></p> 
                         <?php endif; ?>
                     </li>
 

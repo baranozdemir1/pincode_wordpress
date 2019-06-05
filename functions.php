@@ -1,6 +1,7 @@
 <?php
 require_once('inc/bs4navwalker.php');
 require_once('inc/ozel-sidebar.php');
+require_once('framework/cs-framework.php');
 if ( ! function_exists( 'pincode_setup' ) ) :
 
 function pincode_setup() {
@@ -139,7 +140,7 @@ if ( ! function_exists( 'pincode_enqueue_scripts' ) ) :
     wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.css', false, null, 'all');
 
     wp_deregister_style( 'all' );
-    wp_enqueue_style( 'all', 'https://use.fontawesome.com/releases/v5.8.2/css/all.css', false, null, 'all');
+    wp_enqueue_style( 'all', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', false, null, 'all');
 
     /* Pinegrow generated Enqueue Styles End */
 
@@ -154,4 +155,71 @@ function pgwp_sanitize_placeholder($input) { return $input; }
 /* Pinegrow generated Include Resources Begin */
 
     /* Pinegrow generated Include Resources End */
+
+/**
+ * Disable the emoji's
+ */
+function disable_emojis() {
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	remove_action( 'admin_print_styles', 'print_emoji_styles' );	
+	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );	
+	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+	add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
+}
+add_action( 'init', 'disable_emojis' );
+
+/**
+ * Filter function used to remove the tinymce emoji plugin.
+ * 
+ * @param    array  $plugins  
+ * @return   array             Difference betwen the two arrays
+ */
+function disable_emojis_tinymce( $plugins ) {
+	if ( is_array( $plugins ) ) {
+		return array_diff( $plugins, array( 'wpemoji' ) );
+	} else {
+		return array();
+	}
+}
+
+function pincode_image($field){
+    echo wp_get_attachment_image_src(cs_get_option($field),'full')[0];
+}
+
+function pincode_value($field){
+    echo cs_get_option($field);
+}
+
+add_filter( 'excerpt_length', 'pincode_excerpt_length', 999 );
+function pincode_excerpt_length( $length ) {
+    return 10;
+}
+
+function pincode_excerpt( $limit ) {
+    $excerpt = explode(' ', get_the_excerpt(), $limit);
+    if (count($excerpt)>=$limit) {
+    array_pop($excerpt);
+    $excerpt = implode(" ",$excerpt).'...';
+    } else {
+    $excerpt = implode(" ",$excerpt);
+    }
+    $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
+    return $excerpt;
+    }
+    function content($limit) {
+    $content = explode(' ', get_the_content(), $limit);
+    if (count($content)>=$limit) {
+    array_pop($content);
+    $content = implode(" ",$content).'...';
+    } else {
+    $content = implode(" ",$content);
+    }
+    $content = preg_replace('/[.+]/','', $content);
+    $content = apply_filters('the_content', $content);
+    $content = str_replace(']]>', ']]&gt;', $content);
+    return $content;
+    }
 ?>

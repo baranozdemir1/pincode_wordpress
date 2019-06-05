@@ -29,10 +29,10 @@
                         data-text="<?php get_the_title(); ?>"
                         data-related="syedbalkhi:Founder of WPBeginner"
                         data-count="vertical"
-                        target="_blank"><i class="icon-twitter fab fa-twitter"></i><span></span></a>
-                    <a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&t=<?php the_title(); ?>" target="blank" class="icon-button facebook"><i class="icon-facebook fab fa-facebook"></i><span></span></a> 
+                        target="_blank"><i class="icon-twitter fa fa-twitter"></i><span></span></a>
+                    <a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&t=<?php the_title(); ?>" target="blank" class="icon-button facebook"><i class="icon-facebook fa fa-facebook"></i><span></span></a> 
 
-                    <a href="https://www.linkedin.com/cws/share?url=<?php the_permalink(); ?>" class="icon-button google-plus" target="_blank"><i class="icon-google-plus fab fa-linkedin"></i><span></span></a> 
+                    <a href="https://www.linkedin.com/cws/share?url=<?php the_permalink(); ?>" class="icon-button google-plus" target="_blank"><i class="icon-google-plus fa fa-linkedin"></i><span></span></a> 
             </div>                     
             <div class="title-widget-sidebar cursor-default">
                 <?php _e( 'Benzer Yazılar', 'pincode' ); ?>
@@ -101,7 +101,7 @@
                 </div>
             </div>
             <!-- reklam alanı bitiş -->
-            <?=dynamic_sidebar( 'sidebar-1' );?>
+            <?=dynamic_sidebar( 'pincode_son_yazilar' );?>
         </aside>
 
     </div>
