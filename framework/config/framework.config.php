@@ -88,9 +88,14 @@ $options[]      = array(
     // end: a field
     // begin: a field
     array(
-      'id'    => 'pincode_google_analytics_kod',
-      'type'  => 'textarea',
-      'title' => 'Google Analytics Kodu'
+      'id'       => 'pincode_google_analytics_kod',
+      'type'     => 'wysiwyg',
+      'title'    => 'Google Analytics Kodu',
+      'settings' => array(
+        'textarea_rows' => 5,
+        'tinymce'       => false,
+        'media_buttons' => false,
+      )
     ),
     // end: a field
 
