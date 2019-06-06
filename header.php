@@ -26,7 +26,7 @@
                     </div>                         
                     <div class="col-md-4"> 
                         <a class="navbar-brand header-logo" href="<?=get_site_url();?>">
-                            <img src="<?=pincode_image('pincode_logo')?>" class="img-fluid">
+                            <img src="<?=pincode_image('pincode_logo')?>" class="img-fluid" alt="Logo">
                         </a> 
                     </div>                         
                     <div class="col-md-4"> 

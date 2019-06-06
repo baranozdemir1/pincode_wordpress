@@ -22,7 +22,7 @@
             </div>                     
             <!-- <a class="btn btn-outline-primary float-left" href="#">Older</a> <a class="btn btn-outline-secondary disabled float-right" href="#" tabindex="-1" aria-disabled="true">Newer</a> -->                     
             <div class="mx-auto text-center mb-3"> 
-                <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+                <script src="http://platform.twitter.com/widgets.js"></script>
                     <a href="http://twitter.com/share" class=" icon-button twitter"
                         data-url="<?php the_permalink(); ?>"
                         data-via="wpbeginner"
@@ -30,7 +30,7 @@
                         data-related="syedbalkhi:Founder of WPBeginner"
                         data-count="vertical"
                         target="_blank"><i class="icon-twitter fa fa-twitter"></i><span></span></a>
-                    <a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&t=<?php the_title(); ?>" target="blank" class="icon-button facebook"><i class="icon-facebook fa fa-facebook"></i><span></span></a> 
+                    <a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" target="blank" class="icon-button facebook"><i class="icon-facebook fa fa-facebook"></i><span></span></a> 
 
                     <a href="https://www.linkedin.com/cws/share?url=<?php the_permalink(); ?>" class="icon-button google-plus" target="_blank"><i class="icon-google-plus fa fa-linkedin"></i><span></span></a> 
             </div>                     

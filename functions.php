@@ -146,6 +146,12 @@ if ( ! function_exists( 'pincode_enqueue_scripts' ) ) :
 
     }
     add_action( 'wp_enqueue_scripts', 'pincode_enqueue_scripts' );
+    add_filter('style_loader_tag', 'pincode_remove_type_attr', 10, 2);
+    add_filter('script_loader_tag', 'pincode_remove_type_attr', 10, 2);
+
+    function pincode_remove_type_attr($tag, $handle) {
+        return preg_replace( "/type=['\"]text\/(javascript|css)['\"]/", '', $tag );
+    }
 endif;
 
 function pgwp_sanitize_placeholder($input) { return $input; }
