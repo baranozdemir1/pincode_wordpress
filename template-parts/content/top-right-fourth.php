@@ -1,4 +1,4 @@
-                <div class="col-6 pb-2 mrml-m">
+                <div class="col-6 pb-2 mrml-m mobil-duzeltme2">
                     <div class="card bg-dark text-white">
                     <?php
                                         

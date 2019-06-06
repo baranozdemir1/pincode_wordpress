@@ -1,6 +1,23 @@
+<?php
+ $absolute_path = explode('wp-content', $_SERVER['SCRIPT_FILENAME']);
+ $wp_load = $absolute_path[0] . 'wp-load.php';
+ require_once($wp_load);
+
+  header('Content-type: text/css');
+  header('Cache-control: must-revalidate');
+?>
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 body {
     font-family: 'Montserrat', sans-serif;
+    background-color:<?=pincode_value('pincode_body_background_color');?>;
+}
+
+.pincode_header_background{
+    background-color:<?=pincode_value('pincode_header_background_color');?>;
+}
+
+.pincode_body_background{
+    background-color:<?=pincode_value('pincode_body_background_color');?>;
 }
 
 .rklm {
@@ -290,8 +307,8 @@ body {
 }
 
 .recent-post a {text-decoration: none;color:#34495E;transition: 0.5s;}
-.post-img, .recent-post a:hover{color:#60B078;}
-.post-img img:hover{border: 5px solid #60B078;}
+.post-img, .recent-post a:hover{color:<?=pincode_value('pincode_genel_hover_color');?>;}
+.post-img img:hover{border: 5px solid <?=pincode_value('pincode_genel_hover_color');?>;}
 
 .sosyal-medya-header {
     list-style-type: none;
@@ -308,14 +325,14 @@ body {
 }
 
 .sosyal-medya-header li a {
-    color: black;
+    color: <?=pincode_value('pincode_genel_active_color');?>;
     transition: .5s;
 }
 
 .sosyal-medya-header li a:hover {
     transition: .5s;
     text-decoration: none;
-    color: #60B078;
+    color: <?=pincode_value('pincode_genel_hover_color');?>;
 }
 
 .mb-n-5 {
@@ -330,7 +347,7 @@ body {
 .header-logo:hover{
     text-decoration: none;
     transition: .5s;
-    color: #60B078;
+    color: <?=pincode_value('pincode_genel_hover_color');?>;
 }
 
 @media (max-width:767px) {
@@ -358,6 +375,13 @@ body {
     }
     #sosyal-medya-header-none{
         display: none;
+    }
+    .mobil-duzeltme {
+        width: 98%;
+    }
+    .mobil-duzeltme2 {
+        margin-left: -10px;
+        margin-right: 10px;
     }
 }
 /* Small devices (tablets, 768px and up) */
@@ -408,3 +432,12 @@ body {
         top: 0.2em;
     }
 }
+.pincode-mobil-menu span{background-color:#FFF;border-radius:2px;box-shadow:0px 0px 0px 1px #000!important;}
+.pincode-mobil-menu{width:35px;height:30px;position:relative;}
+.pincode-mobil-menu span{position:absolute;transition:.3s cubic-bezier(.8,.5,.2,1.4);width:100%;height:4px;transition-duration:.5s;}
+.pincode-mobil-menu span:nth-child(1){top:0;left:0;}
+.pincode-mobil-menu span:nth-child(2){top:13px;left:0;}
+.pincode-mobil-menu span:nth-child(3){bottom:0;left:0;}
+.pincode-mobil-menu-click span:nth-child(1){transform:rotate(45deg);top:13px;}
+.pincode-mobil-menu-click span:nth-child(2){transform:scale(.1);}
+.pincode-mobil-menu-click span:nth-child(3){transform:rotate(-45deg);top:13px;}

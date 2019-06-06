@@ -12,13 +12,10 @@
 
         <?=pincode_value('pincode_google_analytics_kod')?>
     </head>     
-    <body class="<?php echo implode(' ', get_body_class()); ?>" 
-    style="
-        background-color:<?=pincode_value('pincode_body_background_color');?>;
-    ">
+    <body class="<?php echo implode(' ', get_body_class()); ?>">
     <!-- Header -->         
     <header class="container"> 
-        <nav class="navbar-top navbar-expand-lg font-18 shadow-sm" style="background-color:<?=pincode_value('pincode_header_background_color');?>;"> 
+        <nav class="navbar-top navbar-expand-lg font-18 shadow-sm pincode_header_background"> 
             <div class="container text-center"> 
                 <div class="row"> 
                     <div class="col-md-4"> 
@@ -52,11 +49,16 @@
                 </div>                     
             </div>                 
         </nav>
-        <div class="header" style="background-color:<?=pincode_value('pincode_header_background_color');?>;"> 
+        <div class="header pincode_header_background"> 
             <nav class="navbar navbar-expand-lg navbar-light shadow-sm font-18">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <div class="pincode-mobil-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </button>
+                
                     <?php
                     wp_nav_menu([
                         'menu'            => 'primary',

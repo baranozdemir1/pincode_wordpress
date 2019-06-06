@@ -7,16 +7,16 @@
             the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid detay-resim mb-3', 'alt' => $post_title]);
             ?>
             
-            
-            <h1 class="text-center mb-3"><?=get_the_title();?></h1>
-            <p class="text-justify">
+            <h2 class="text-center mb-3"><?=get_the_title();?></h2>
+            <div class="text-justify">
                 <?php
                     if ( $post -> post_content == "" )
                         echo '<p class="text-center mb-3" style="color:red">BU GÖNDERİYE YAZI GİRİLMEMİŞ</p>';
                     else
                         echo get_the_content();
                 ?>
-            </p> 
+            </div>
+                
             <div class="title-widget-sidebar cursor-default">
                 <?php _e( 'Paylaş', 'pincode' ); ?>
             </div>                     

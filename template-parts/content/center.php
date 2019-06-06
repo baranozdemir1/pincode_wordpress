@@ -43,11 +43,11 @@
                 </div>                         
                 <div class="baran-bottom"> 
                     <script src="http://platform.twitter.com/widgets.js"></script>
-                    <a href="http://twitter.com/share" class=" icon-button twitter"
+                    <a href="http://twitter.com/share" class="icon-button twitter"
                         data-url="<?php the_permalink(); ?>"
-                        data-via="wpbeginner"
+                        data-via="pincode"
                         data-text="<?php get_the_title(); ?>"
-                        data-related="syedbalkhi:Founder of WPBeginner"
+                        data-related="PinCode"
                         data-count="vertical"
                         target="_blank"><i class="icon-twitter fa fa-twitter"></i><span></span></a>
                     <a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" target="blank" class="icon-button facebook"><i class="icon-facebook fa fa-facebook"></i><span></span></a> 

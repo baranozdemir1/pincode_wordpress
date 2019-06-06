@@ -8,12 +8,10 @@ $(document).ready(function(){
             $(".textfeat").hide(500);
         }
     );
-});
 
-// init Infinite Scroll
-$('.article-feed').infiniteScroll({
-    path: '.pagination__next',
-    append: '.article',
-    status: '.scroller-status',
-    hideNav: '.pagination',
+    const menuFive = document.querySelector('.pincode-mobil-menu');
+    function addClassFunFive() {
+        this.classList.toggle("pincode-mobil-menu-click");
+    }
+    menuFive.addEventListener('click', addClassFunFive);
 });
