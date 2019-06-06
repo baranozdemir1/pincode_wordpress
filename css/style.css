@@ -178,7 +178,6 @@ body {
 }
 /* Wrapper */
 .icon-button {
-	background-color: white;
 	border-radius: 3.6rem;
 	cursor: pointer;
 	display: inline-block;

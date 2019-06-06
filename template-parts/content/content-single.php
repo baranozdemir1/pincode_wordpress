@@ -49,7 +49,7 @@
                                 'category__in' => $category_ids, 
                                 'post__not_in' => array($post->ID), 
                                 'showposts'=>4, 
-                                'caller_get_posts'=>1 
+                                'ignore_sticky_posts'=>1 
                             ); 
                             
                             $my_query = new wp_query($args); 
@@ -101,7 +101,7 @@
                 </div>
             </div>
             <!-- reklam alanı bitiş -->
-            <?=dynamic_sidebar( 'pincode_son_yazilar' );?>
+            <?=dynamic_sidebar( 'pincode_bilesen' );?>
         </aside>
 
     </div>

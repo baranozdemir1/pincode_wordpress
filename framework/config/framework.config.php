@@ -82,12 +82,6 @@ $options[]      = array(
           'type'    => 'icon',
           'title'   => 'İkon',
         ),
-        array(
-          'id'      => 'unique_color_picker_1',
-          'type'    => 'color_picker',
-          'title'   => 'Color Picker',
-          'default' => '#dd3333',
-        ),
 
       )
     ),

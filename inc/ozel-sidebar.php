@@ -3,9 +3,9 @@ add_action( 'widgets_init', 'pincode_widgets_init' );
 function pincode_widgets_init() {
     register_sidebar( array(
         'name' => __( 'Detay Sayfası Yan Bar', 'pincode' ),
-        'id' => 'pincode_son_yazilar',
+        'id' => 'pincode_bilesen',
         'description' => __( 'Yazı detay sayfasındaki yan bar.', 'pincode' ),
-        'before_widget' => '<div class="widget-sidebar">',
+        'before_widget' => '<div class="widget-sidebar" style="background-color:'. cs_get_option('pincode_body_background_color') .'!important">',
         'after_widget'  => '</div>',
         'before_title'  => '<h2 class="title-widget-sidebar cursor-default">',
         'after_title'   => '</h2>',
@@ -146,4 +146,3 @@ add_action( 'widgets_init', function(){
 
 
 ?>
-

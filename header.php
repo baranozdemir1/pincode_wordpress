@@ -34,15 +34,18 @@
                             <ul class="sosyal-medya-header mb-n-5">
                                 
                                 <?php
-                                
-                                    $getir_grup = cs_get_option('pincode_sosyal_medya');
-                                    foreach ($getir_grup as $getir_grup_value){
+                                    if (empty(cs_get_option('pincode_sosyal_medya'))){
+                                        echo "<li></li>";
+                                    }else{
+
+                                        $getir_grup = cs_get_option('pincode_sosyal_medya');
+                                        foreach ($getir_grup as $getir_grup_value){
                                 
                                 ?>
                                     <li>
                                         <a target="_blank" href="<?=esc_html($getir_grup_value['pincode_hesap_linki'])?>"><i class="<?=esc_html($getir_grup_value['pincode_sosyal_medya_ikon'])?>"></i></a>
                                     </li>
-                                <?php } ?>
+                                <?php }} ?>
                             </ul>
                         </div>
                     </div>                         
