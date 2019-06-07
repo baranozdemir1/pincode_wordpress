@@ -13,7 +13,8 @@
         <?=pincode_value('pincode_google_analytics_kod')?>
     </head>     
     <body class="<?php echo implode(' ', get_body_class()); ?>">
-    <!-- Header -->         
+    <!-- Header -->
+
     <header class="container"> 
         <nav class="navbar-top navbar-expand-lg font-18 shadow-sm pincode_header_background"> 
             <div class="container text-center"> 

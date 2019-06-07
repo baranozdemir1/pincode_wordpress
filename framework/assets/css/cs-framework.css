@@ -525,7 +525,8 @@
   -moz-border-radius: 2px 2px 0 0;
   -webkit-border-radius: 2px;
   border-radius: 2px 2px 0 0;
-  background-image: radial-gradient(circle, #60b078, #3ebba0, #21c4c7, #3ccae8, #70cdff);
+  background-color: gray;
+  border-bottom: 4px solid #60B078;
 }
 .cs-framework .cs-header h1 {
   color: #fff;
@@ -573,14 +574,14 @@
   padding: 15px;
   text-decoration: none;
   color: black;
-  background-image: linear-gradient(to left, #60b078, #3ebba0, #21c4c7, #3ccae8, #70cdff);
+  background-color: gray;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
 .cs-framework .cs-nav ul li a:hover {
-  color: #fff;
+  color: #60B078;
 }
 .cs-framework .cs-nav ul li a:focus {
   outline: none;
@@ -589,8 +590,8 @@
   box-shadow: none;
 }
 .cs-framework .cs-nav ul li .cs-section-active {
-  color: #fff;
-  background-color: #111;
+  color: black;
+  background-color: white;
 }
 .cs-framework .cs-nav ul li .cs-section-active:after {
   content: " ";
@@ -678,7 +679,7 @@
   bottom: 0;
   z-index: 9;
   width: 225px;
-  background-color: #60B078;
+  background-color: gray;
 }
 .cs-framework .cs-content {
   position: relative;
@@ -709,10 +710,11 @@
   color: #000;
   text-align: right;
   font-size: 11px;
-  background-image: radial-gradient(circle, #60b078, #3ebba0, #21c4c7, #3ccae8, #70cdff);
+  background-color: gray; 
   -moz-border-radius: 0 0 2px 2px;
   -webkit-border-radius: 0;
   border-radius: 0 0 2px 2px;
+  border-top: 4px solid #60B078;
 }
 .cs-framework .cs-show-all .cs-nav-background,
 .cs-framework .cs-show-all .cs-nav {

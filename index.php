@@ -2,7 +2,7 @@
 get_header(); ?>
 
 <div class="container mt-5"> 
-    <div class="row"> 
+    <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-6  py-0 pl-3 pr-1 featcard"> 
             <div id="featured" class="carousel slide carousel-fade" data-ride="carousel"> 
                 <div class="carousel-inner mobil-duzeltme"> 

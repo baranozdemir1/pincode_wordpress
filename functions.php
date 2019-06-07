@@ -198,6 +198,9 @@ function pincode_image($field){
 function pincode_value($field){
     echo cs_get_option($field);
 }
+function pincode_values($field){
+    cs_get_option($field);
+}
 
 add_filter( 'excerpt_length', 'pincode_excerpt_length', 999 );
 function pincode_excerpt_length( $length ) {

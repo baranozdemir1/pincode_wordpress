@@ -6,6 +6,7 @@
 // ===============================================================================================
 
 $my_theme = wp_get_theme();
+$yol = get_template_directory_uri();
 
 $settings           = array(
   'menu_title'      => 'PinCode Ayarlar',
@@ -100,6 +101,35 @@ $options[]      = array(
     // end: a field
 
   ), // end: fields
+);
+// ----------------------------------------
+// a option section for options overview  -
+// ----------------------------------------
+$options[]      = array(
+  'name'        => 'pincode_grid_ayarlari',
+  'title'       => 'Grid Ayarları',
+  'icon'        => 'fa fa-th',
+
+  // begin: fields
+  'fields'      => array(
+  
+    // begin: a field
+    array(
+      'id'           => 'pincode_ana_sayfa_yazi_grid',
+      'type'         => 'image_select',
+      'title'        => 'Ana Sayfa Yazı Gösterim Şekli',
+      'options'      => array(
+        'grid-12'    => $yol . '/img/grid-12.png',
+        'grid-6'     => $yol . '/img/grid-6.png',
+        'grid-4'     => $yol . '/img/grid-4.png',
+        'grid-3'     => $yol . '/img/grid-3.png',
+        'grid-2'     => $yol . '/img/grid-2.png',
+      ),
+      'radio'        => true,
+      'default'      => 'grid-4'
+    ),
+    // end: a field
+  ),
 );
 // ----------------------------------------
 // a option section for options overview  -

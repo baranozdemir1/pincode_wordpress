@@ -195,20 +195,19 @@ body {
 }
 /* Wrapper */
 .icon-button {
-	border-radius: 3.6rem;
-	cursor: pointer;
-	display: inline-block;
-	font-size: 1.75rem;
-	height: 3.6rem;
-	line-height: 3.6rem;
-	margin: 0 5px;
-	position: relative;
-	text-align: center;
-	-webkit-user-select: none;
-	   -moz-user-select: none;
-	    -ms-user-select: none;
-	        user-select: none;
-	width: 3.6rem;
+    border-radius: 3.3rem;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.5rem;
+    height: 2.3rem;
+    line-height: 2.3rem;
+    position: relative;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 2.3rem;
 }
 
 /* Circle */
@@ -227,10 +226,10 @@ body {
 	width: 0;
 }
 .icon-button:hover span {
-	width: 3.6rem;
-	height: 3.6rem;
-	border-radius: 3.6rem;
-	margin: -1.8rem;
+	width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 2.3rem;
+    margin: -1.2rem;
 }
 .twitter span {
 	background-color: #4099ff;
@@ -244,19 +243,19 @@ body {
 
 /* Icons */
 .icon-button i {
-	background: none;
-	color: white;
-	height: 3.6rem;
-	left: 0;
-	line-height: 3.6rem;
-	position: absolute;
-	top: 0;
-	-webkit-transition: all 0.3s;
-	   -moz-transition: all 0.3s;
-	     -o-transition: all 0.3s;
-	        transition: all 0.3s;
-	width: 3.6rem;
-	z-index: 10;
+    background: none;
+    color: white;
+    height: 2.3rem;
+    left: 0;
+    line-height: 2.3rem;
+    position: absolute;
+    top: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 2.3rem;
+    z-index: 10;
 }
 .icon-button .icon-twitter {
 	color: #4099ff;
